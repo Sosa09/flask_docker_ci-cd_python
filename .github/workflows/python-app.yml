@@ -23,6 +23,11 @@ jobs:
       uses: actions/setup-python@v3
       with:
         python-version: "3.11.2"
+    - name: set up environment variables
+      run: |
+        #make sure connection.py is in the parent repo
+        export FLASK_APP="./connection.py"
+        export FLASK_ENV="Development"
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
