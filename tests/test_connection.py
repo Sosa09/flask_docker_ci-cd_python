@@ -1,3 +1,6 @@
-#empty for now
+from connection import app
+#Testing connection is open
+client = app.test_client();
 def test_connection():
-    assert 1 == 1
+    response = client.get('/')
+    assert response.json.values()[0] == "flask is running!" 
