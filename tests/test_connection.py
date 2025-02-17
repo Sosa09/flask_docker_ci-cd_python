@@ -5,4 +5,5 @@ from connection import app
 client = app.test_client();
 def test_connection():
     response = client.get('/')
-    assert response.json.values()[0] == "flask is running!" 
+    print(response.text)
+    assert response.text == "flask is running!" 
