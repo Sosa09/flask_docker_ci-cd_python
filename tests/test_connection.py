@@ -1,3 +1,5 @@
+import sys
+sys.path.append("/")
 from connection import app
 #Testing connection is open
 client = app.test_client();
