@@ -1,5 +1,0 @@
-FROM pythonboilerplate/python3
-WORKDIR /app
-COPY . /app/
-RUN pip install requirement.txt
-CMD ["python3", "connection.py"]
